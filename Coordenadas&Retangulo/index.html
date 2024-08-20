@@ -1,0 +1,30 @@
+<html>
+<!--Crie um retangulo usando coordenadas e deixe o vermelho com bordas azuis-->
+
+<!--Canvas é uma tag que permite desenhar gráficos, composição de fotos e animaçoes atraves de script. Geralmente JavaScript-->
+<canvas id="meu_canvas" width="1000" height="1000"></canvas> <!--Determina a area do quadro que será apresentado os graficos-->
+
+<script>
+    //Canvas e contexto
+
+    //
+    var canvas = document.getElementById('meu_canvas'); //Metodo usado para encontrar meu id=meu_canvas)
+    var context = canvas.getContext('2d') //Utilizado para indicar que deseja que estou trabalhando com graficos bidimensionais (2d).
+
+    //Desenho do retangulo
+    context.fillStyle = 'red'; //Implementar a cor vermelho ao retangulo
+    context.fillRect(50, 50, 100, 100);;; //Determina as coordenados do retangulo (x e y)na pagina e sua altura e largura.
+
+
+    context.lineWidth = 3; //Tamanho da especura da borda do rentangulo
+    context.strokeStyle = 'blue';//Atribui ao segunda retangulo a cor azul.
+    context.strokeRect(50, 50, 100,100)//Determina as coodernados de um segundo retangulo.
+
+</script>
+<!--
+Conclusão: Foram feitos dois retangulos. Um por cima do outro, um pintado dentro por dentro de vermelho, e outro por cima apenas com as apenas as bordas e de cor azul.
+fillRect: Desenha um retangulo com cor que cobre complementamente sua area
+strockRect: Desenha um retangulo apenas com contorno
+-->
+
+</html>
