@@ -1,0 +1,35 @@
+<html>
+
+<!--Desenhando um triangulo azul utilizando JavaScript-->
+
+<canvas id="meu_canvas" width="500" height="500"></canvas>
+
+<script>
+
+//Canvas Contexto
+var canvas = document.getElementById('meu_canvas');
+var context = canvas.getContext('2d');
+
+//Iniciar o caminho (Apaga desenhos anteriores)
+context.beginPath();
+
+//Desenho da estrela
+
+//Posições dos traços no canvas
+context.moveTo(75, 250);//Ponto Inicial
+context.lineTo(150,50); //Desenha uma linha da coodernada anterior até a coodernada inserida.
+context.lineTo(225,250);
+context.lineTo(50,120);
+context.lineTo(250,120);
+context.lineTo(75,250);
+
+//Configura a linha
+context.lineWidght =2; //Define espessura da linha
+context.strokeStyle = 'blue'// Define Cor
+
+//traça o caminho
+context.stroke();// Chama as configurações acima e executa ( o triangulo).
+
+</script>
+
+</html>
